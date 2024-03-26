@@ -126,12 +126,6 @@ function barplot(parsed_data) {
         .selectAll("rect") // Buscamos cada rect
         .data(parsed_data) // Aplicamos data-join entre los rect y los datos
         .join("rect") // Creamos un rect para cada dato del conjunto "ENTER"
-        .attr()
-
-
-
-
-
 
 }
 
