@@ -81,6 +81,53 @@ function barplot(parsed_data) {
         .attr("transform", `translate(0, 0)`) // Trasladamos el G
         .call(ejeY); // Usamos call para crear el eje
 
+    // Seleccionamos nuestro eje X y luego cada linea
+    SVG.select("#ejeX")
+        .selectAll("line")
+        .attr("y2", -HEIGHT) // Definimos la longitud de las lineas
+        /* Notar que este valor es negativo porque tomamos el eje x como referencia, 
+        que ya tiene un valor en el eje y, y lo estamos definiendo respecto a eso. */
+        .attr("stroke", "black") // Definimos el color de la línea
+        .attr("stroke-width", 1.5) // Definimos en ancho de la línea
+        .attr("stroke-dasharray", "5,5") // Extra: definimos que será punteada
+        .attr("opacity", (_, i) => {
+            if (i === 0) {
+                return 0;
+            } else {
+                return 0.5;
+            }
+        });
+
+    /* Esto último hace un poco opaca la línea del eje, pero la opacidad es 0 para la primera línea, cosa que no se sobreponga con el eje Y */
+
+    // Extra
+    // Se pueden esconder los labels del eje y.
+    // d3.select("#ejeY").selectAll("text").attr('opacity', 0)
+
+    // Seleccionamos nuestro EjeY y luego cada texto (los labels)
+    d3.select("#ejeY")
+        .selectAll("text")
+        .attr("font-size", 15) // Definimos el tamaño de la fuente
+        .attr("font-weight", "bold") // Lo hacemos más negro
+        .attr("font-family", "monospace"); //Hacemos que sea mono espaciado, es decir, cada letra usa el mismo espacio
+
+    // Bonus
+    // Tambien se puede asignar una clase para aplicar el estilo en css
+    // d3.select("#ejeY").selectAll("text").attr('class', 'labelsY');
+
+    // GRAFICAR DATOS
+
+    // BARRAS
+    // Creamos un G, le damos el id "barsG"
+    let barsG = SVG.append("g").attr("id", "barsG");
+
+    // Usamos la variable "barsG" que tiene nuestro G y aplicamos data-join
+    barsG
+        .selectAll("rect") // Buscamos cada rect
+        .data(parsed_data) // Aplicamos data-join entre los rect y los datos
+        .join("rect") // Creamos un rect para cada dato del conjunto "ENTER"
+        .attr()
+
 
 
 
