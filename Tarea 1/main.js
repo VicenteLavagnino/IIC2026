@@ -81,5 +81,13 @@ function barplot(parsed_data) {
         .attr("transform", `translate(0, 0)`) // Trasladamos el G
         .call(ejeY); // Usamos call para crear el eje
 
+
+
+
+
+
 }
 
+/* Llamamos a nuestra función encargada de procesar los datos, que a su vez se encarga de llamar
+a la función que crea la visualización */
+preprocessingBarchartDataset(data_path);
