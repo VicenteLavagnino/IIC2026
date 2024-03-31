@@ -49,6 +49,12 @@ function barplot(parsed_data) {
 
     // SETEAR LA VISUALIZACION
 
+    const margin = { top: 20, right: 30, bottom: 30, left: 50 },
+
+        width = WIDTH - margin.left - margin.right,
+        height = HEIGHT - margin.top - margin.bottom;
+
+
     // Máximo para los datos según el atributo "max"
     let max_point = d3.max(parsed_data, d => d.max);
 
@@ -61,7 +67,7 @@ function barplot(parsed_data) {
     let ejeY = d3.axisLeft(escala_vertical);
 
     // Creamos nuestro primer RECT que será el fondo
-    SVG.append("rect")
+    svg.append("rect")
         .attr("x", 0) // Definimos atributo X
         .attr("y", 0) // Definimos atributo Y
         .attr("width", WIDTH) // Definimos atributo "ancho"
@@ -70,19 +76,19 @@ function barplot(parsed_data) {
         .attr("stroke", "black"); // Definimos el color del borde
 
     // Agregamos el eje X. Para esto usamos call y d3.axisBottom(escala_horizontal)
-    SVG.append("g")
+    svg.append("g")
         .attr("id", "ejeX") // Le damos un ID
         .attr("transform", `translate(0, ${HEIGHT})`) // Trasladamos el G
         .call(ejeX); // Usamos call para crear el eje
 
     //Agregamos el eje Y. Para esto usamos call y d3.axisLeft(escala_vertical)
-    SVG.append("g")
+    svg.append("g")
         .attr("id", "ejeY") // Le damos un ID
         .attr("transform", `translate(0, 0)`) // Trasladamos el G
         .call(ejeY); // Usamos call para crear el eje
 
     // Seleccionamos nuestro eje X y luego cada linea
-    SVG.select("#ejeX")
+    svg.select("#ejeX")
         .selectAll("line")
         .attr("y2", -HEIGHT) // Definimos la longitud de las lineas
         /* Notar que este valor es negativo porque tomamos el eje x como referencia, 
