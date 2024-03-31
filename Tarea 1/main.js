@@ -65,6 +65,8 @@ function barplot(parsed_data) {
     // TITULO
 
     svg.append("text")
+        .attr("x", (WIDTH / 2))
+        .style("font-size", "20px")
         .text("Acciones Apple")
 
 
