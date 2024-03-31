@@ -26,3 +26,7 @@ img {
 }
 
 /* COMPLETAR CON EL CSS ADICIONAL QUE CONSIDERES NECESARIO */
+
+.bar:hover {
+    stroke: blue;
+}
