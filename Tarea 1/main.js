@@ -76,7 +76,7 @@ function barplot(parsed_data) {
         .call(d3.axisBottom(escala_horizontal));
 
     svg.append("g")
-        .call(d3.axisLeft(escala_vertical));
+        .call(d3.axisLeft(escala_vertical).tickFormat(d => `$${d}`)); // Se agrega bonus
 
     // LINEA MAX y MIN
     svg.selectAll("difference-line")
@@ -88,7 +88,7 @@ function barplot(parsed_data) {
         .attr("x2", d => escala_horizontal(d.date))
         .attr("y2", d => escala_vertical(d.min))
         .attr("stroke", "black")
-        .attr("stroke-width", 2);
+        .attr("stroke-width", 2)
 
     // BARRAS
     svg.selectAll(".bar")
