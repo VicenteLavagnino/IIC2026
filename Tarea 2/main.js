@@ -1,4 +1,4 @@
-// El archivi incluye reproducciónn de música. 
+// El archivo incluye reproducciónn de música. 
 // Al final se explica como apagarlo por si acaso 😅
 
 const SERIES_URL = "https://raw.githubusercontent.com/Hernan4444/public_files/main/db_series.csv"
