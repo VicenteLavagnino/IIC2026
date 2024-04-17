@@ -31,6 +31,16 @@ function crearSeries() {
         // No olvides actualizar los <span> con el "style" de background-color
         // según el color categóricos elegidos. Cada span tiene un ID único.
 
+        // Escala barras
+        
+        
+
+
+
+
+
+
+
 
         /* 
         Cada vez que se haga click en un conjunto de libros. Debes llamar a

@@ -1,5 +1,5 @@
 body {
-    margin: 0 auto;
+    margin: auto;
     /* Puedes cambiar el color de fondo (background-color) si lo deseas */
     background-color: #ffac8c;
     color: rgb(47, 47, 47);
@@ -48,4 +48,19 @@ svg {
 /*editar despues */
 .button {
     background-color: #8eff8c;
+}
+
+.button:hover + body {
+    background-color: blue;
+}
+
+.main_container {
+    border: solid 4px white;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main_container:hover {
+    background-color: #978cff;
 }
