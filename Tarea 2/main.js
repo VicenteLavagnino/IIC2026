@@ -13,6 +13,14 @@ const HEIGHT_VIS_1 = 250;
 const WIDTH_VIS_2 = 800;
 const HEIGHT_VIS_2 = 1600;
 
+// código sacado de https://github.com/PUC-Infovis/Syllabus-2024-1/blob/main/Ayudantias/Ayudantia_3/data_join.js
+const MARGIN = {
+    top: 30,
+    bottom: 30,
+    right: 30,
+    left: 30,
+  };
+
 SVG1.attr("width", WIDTH_VIS_1).attr("height", HEIGHT_VIS_1);
 SVG2.attr("width", WIDTH_VIS_2).attr("height", HEIGHT_VIS_2);
 
@@ -31,7 +39,32 @@ function crearSeries() {
         // No olvides actualizar los <span> con el "style" de background-color
         // según el color categóricos elegidos. Cada span tiene un ID único.
 
-        // Escala barras
+        // Tamaño
+        const width = WIDTH_VIS_1 - MARGIN.left - MARGIN.right;
+        const height = HEIGHT_VIS_1 - MARGIN.top - MARGIN.bottom;
+
+        // Grafico
+        const g = SVG1.append("g")
+
+        // Escala X
+        const x = d3.scaleBand()
+            .domain(series.map(d => d.serie))
+            .range([MARGIN.left, width + MARGIN.left])
+            .padding(0.2);
+
+        g.append("g").attr("transform", `translate(0, ${height + MARGIN.top})`).call(d3.axisBottom(x)); // Formato sacado de ayudantía
+
+        // Escala Y
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(series, d => d.personajes_recurrentes + 5)])
+            .range([height + MARGIN.top, MARGIN.top]);
+
+        g.append("g").attr("transform", `translate(${MARGIN.left}, 0)`).call(d3.axisLeft(y)); // Formato sacado de ayudantía
+
+
+        // añadir libro
+        
+        
         
         
 
