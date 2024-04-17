@@ -56,24 +56,33 @@ function crearSeries() {
 
         // Escala Y
         const y = d3.scaleLinear()
-            .domain([0, d3.max(series, d => d.personajes_recurrentes + 5)])
+            .domain([0, d3.max(series, d => d.personajes_extras + 5)])
             .range([height + MARGIN.top, MARGIN.top]);
 
         g.append("g").attr("transform", `translate(${MARGIN.left}, 0)`).call(d3.axisLeft(y)); // Formato sacado de ayudantía
 
 
         // añadir libro
+
+        // Libro izquierdo
+        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[0].personajes_extras)).attr("x", x(series[0].serie)).attr("y", y(series[0].personajes_extras)).attr("fill", series[0].manga ? "red" : "blue");
+        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[1].personajes_extras)).attr("x", x(series[1].serie)).attr("y", y(series[1].personajes_extras)).attr("fill", series[1].manga ? "red" : "blue");
+        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[2].personajes_extras)).attr("x", x(series[2].serie)).attr("y", y(series[2].personajes_extras)).attr("fill", series[2].manga ? "red" : "blue");
+
+
+        // Definir colores
+        const color_bycap = d3.scaleLinear([0, 300], ["white", "green"])
+
+        // Libro medio
+        g.append("rect").attr("width", 3 * series[0].aventuras).attr("height", (y(0) - y(series[0].personajes_extras)) / 2).attr("x", x(series[0].serie) + 50).attr("y",y(series[0].personajes_extras) + (y(0) - y(series[0].personajes_extras)) / 2).attr("fill", color_bycap(series[0].cantidad_caps));
+        g.append("rect").attr("width", 3 * series[1].aventuras).attr("height", (y(0) - y(series[1].personajes_extras)) / 2).attr("x", x(series[1].serie) + 50).attr("y",y(series[1].personajes_extras) + (y(0) - y(series[1].personajes_extras)) / 2).attr("fill", color_bycap(series[1].cantidad_caps));
+        g.append("rect").attr("width", 3 * series[2].aventuras).attr("height", (y(0) - y(series[2].personajes_extras)) / 2).attr("x", x(series[2].serie) + 50).attr("y",y(series[2].personajes_extras) + (y(0) - y(series[2].personajes_extras)) / 2).attr("fill", color_bycap(series[2].cantidad_caps));
         
+        // Libro derecho
+        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[0].personajes_recurrentes)).attr("x", x(series[0].serie) + 50 + 3 * series[0].aventuras).attr("y", y(series[0].personajes_recurrentes)).attr("fill", "purple");
+        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[1].personajes_recurrentes)).attr("x", x(series[1].serie) + 50 + 3 * series[1].aventuras).attr("y", y(series[1].personajes_recurrentes)).attr("fill", "white");
+        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[2].personajes_recurrentes)).attr("x", x(series[2].serie) + 50 + 3 * series[2].aventuras).attr("y", y(series[2].personajes_recurrentes));
         
-        
-        
-
-
-
-
-
-
-
 
         /* 
         Cada vez que se haga click en un conjunto de libros. Debes llamar a
