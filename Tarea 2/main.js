@@ -101,12 +101,12 @@ function crearSeries() {
         */
 
         g.selectAll(".libro-izquierdo, .libro-medio, .libro-derecho").on("click", function (event, d) {
-            console.log("Click: ", d.serie);
+            // console.log("Apreto: ", d.serie);
             preprocesarPersonajes(d.serie, false);
 
             // https://developer.mozilla.org/es/docs/Web/API/Window/scrollBy
-            window.scrollBy({
-                top: 300,
+            window.scrollTo({
+                top: 850,
                 behavior: 'smooth'
             });
         })
