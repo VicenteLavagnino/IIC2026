@@ -39,7 +39,9 @@ function crearSeries() {
         // No olvides actualizar los <span> con el "style" de background-color
         // según el color categóricos elegidos. Cada span tiene un ID único.
 
-        const colorScale = d3.scaleOrdinal().domain(series.map(d => d.serie)).range(["purple", "green", "white"]);
+        const color_serie = d3.scaleOrdinal().domain(series.map(d => d.serie)).range(["purple", "green", "white"]);
+        const color_bycap = d3.scaleLinear([0, 300], ["white", "black"]) // Escala de color
+
 
         // Tamaño
         const width = WIDTH_VIS_1 - MARGIN.left - MARGIN.right;
@@ -65,24 +67,51 @@ function crearSeries() {
 
 
         // Libro izquierdo
+        console.log(series)
         g.selectAll(".libro-izquierdo").data(series).join("rect").attr("class", "libro-izquierdo").attr("width", 50).attr("height", d => y(0) - y(d.personajes_extras)).attr("x", d => x(d.serie)).attr("y", d => y(d.personajes_extras)).attr("fill", d => d.manga ? "red" : "blue"); 
         g.selectAll(".tejuelo-izquierdo").data(series).join("rect").attr("class", "tejuelo-izquierdo").attr("width", 50).attr("height", 5).attr("x", d => x(d.serie)).attr("y", d => y(d.personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelas
         
         // Libro medio
-        const color_bycap = d3.scaleLinear([0, 300], ["white", "black"]) // Escala de color
         g.selectAll(".libro-medio").data(series).join("rect").attr("class", "libro-medio").attr("width", d => 3 * d.aventuras).attr("height", d => (y(0) - y(d.personajes_extras)) / 2).attr("x", d => x(d.serie) + 50).attr("y", d => y(d.personajes_extras) + (y(0) - y(d.personajes_extras)) / 2).attr("fill", d => color_bycap(d.cantidad_caps));
         g.selectAll(".tejuelo-medio").data(series).join("rect").attr("class", "tejuelo-medio").attr("width", d => 3 * d.aventuras).attr("height", 5).attr("x", d => x(d.serie) + 50).attr("y", d => y(d.personajes_extras) + (y(0) - y(d.personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelas
 
         // Libro derecho
-        g.selectAll(".libro-derecho").data(series).join("rect").attr("class", "libro-derecho").attr("width", 50).attr("height", y(0) - 90).attr("x", d => x(d.serie) + 50 + 3 * d.aventuras).attr("y", 90).attr("fill", d => colorScale(d.serie)); 
+        g.selectAll(".libro-derecho").data(series).join("rect").attr("class", "libro-derecho").attr("width", 50).attr("height", y(0) - 90).attr("x", d => x(d.serie) + 50 + 3 * d.aventuras).attr("y", 90).attr("fill", d => color_serie(d.serie)); 
         g.selectAll(".tejuelo-derecho").data(series).join("rect").attr("class", "tejuelo-derecho").attr("width", 50).attr("height", 5).attr("x", d => x(d.serie) + 50 + 3 * d.aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelas
 
+
+        // Eventos
+        
+        g.selectAll(".libro-izquierdo, .libro-medio, .libro-derecho").on("mouseover", function (event, d) {
+            
+            // console.log("Mouse over: ", d);
+            // console.log("Serie Name: ", d.serie);
+            d3.select("#detailName").text(d.serie);
+            d3.select("#detailCaps").text(d.cantidad_caps);
+            d3.select("#detailAventuras").text(d.aventuras);
+            d3.select("#detailPersRecurrent").text(d.personajes_recurrentes);
+            d3.select("#detailPersExtras").text(d.personajes_extras);
+            d3.select("#detailPersManga").text(d.manga);
+        })
 
         /* 
         Cada vez que se haga click en un conjunto de libros. Debes llamar a
         preprocesarPersonajes(serie, false) donde "serie" 
         corresponde al nombre de la serie presionada.
+        */
+
+        g.selectAll(".libro-izquierdo, .libro-medio, .libro-derecho").on("click", function (event, d) {
+            console.log("Click: ", d.serie);
+            preprocesarPersonajes(d.serie, false);
+
+            // https://developer.mozilla.org/es/docs/Web/API/Window/scrollBy
+            window.scrollBy({
+                top: 300,
+                behavior: 'smooth'
+            });
+        })
     
+        /*
         preprocesarPersonajes se encargará de ejecutar a crearPersonajes(...)
         */
     })
