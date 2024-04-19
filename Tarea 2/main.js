@@ -64,24 +64,32 @@ function crearSeries() {
 
         // añadir libro
 
-        // Libro izquierdo
+        // Libro izquierdo + tejuelos
         g.append("rect").attr("width", 50).attr("height", y(0) - y(series[0].personajes_extras)).attr("x", x(series[0].serie)).attr("y", y(series[0].personajes_extras)).attr("fill", series[0].manga ? "red" : "blue");
+        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[0].serie)).attr("y", y(series[0].personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelo
         g.append("rect").attr("width", 50).attr("height", y(0) - y(series[1].personajes_extras)).attr("x", x(series[1].serie)).attr("y", y(series[1].personajes_extras)).attr("fill", series[1].manga ? "red" : "blue");
+        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[1].serie)).attr("y", y(series[1].personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelo
         g.append("rect").attr("width", 50).attr("height", y(0) - y(series[2].personajes_extras)).attr("x", x(series[2].serie)).attr("y", y(series[2].personajes_extras)).attr("fill", series[2].manga ? "red" : "blue");
-
+        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[2].serie)).attr("y", y(series[2].personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelo
 
         // Definir colores
         const color_bycap = d3.scaleLinear([0, 300], ["white", "green"])
 
         // Libro medio
         g.append("rect").attr("width", 3 * series[0].aventuras).attr("height", (y(0) - y(series[0].personajes_extras)) / 2).attr("x", x(series[0].serie) + 50).attr("y",y(series[0].personajes_extras) + (y(0) - y(series[0].personajes_extras)) / 2).attr("fill", color_bycap(series[0].cantidad_caps));
+        g.append("rect").attr("width", 3 * series[0].aventuras).attr("height", 5).attr("x", x(series[0].serie) + 50).attr("y",y(series[0].personajes_extras) + (y(0) - y(series[0].personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelo
         g.append("rect").attr("width", 3 * series[1].aventuras).attr("height", (y(0) - y(series[1].personajes_extras)) / 2).attr("x", x(series[1].serie) + 50).attr("y",y(series[1].personajes_extras) + (y(0) - y(series[1].personajes_extras)) / 2).attr("fill", color_bycap(series[1].cantidad_caps));
+        g.append("rect").attr("width", 3 * series[1].aventuras).attr("height", 5).attr("x", x(series[1].serie) + 50).attr("y",y(series[1].personajes_extras) + (y(0) - y(series[1].personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelo
         g.append("rect").attr("width", 3 * series[2].aventuras).attr("height", (y(0) - y(series[2].personajes_extras)) / 2).attr("x", x(series[2].serie) + 50).attr("y",y(series[2].personajes_extras) + (y(0) - y(series[2].personajes_extras)) / 2).attr("fill", color_bycap(series[2].cantidad_caps));
+        g.append("rect").attr("width", 3 * series[2].aventuras).attr("height", 5).attr("x", x(series[2].serie) + 50).attr("y",y(series[2].personajes_extras) + (y(0) - y(series[2].personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelo
         
         // Libro derecho
-        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[0].personajes_recurrentes)).attr("x", x(series[0].serie) + 50 + 3 * series[0].aventuras).attr("y", y(series[0].personajes_recurrentes)).attr("fill", "purple");
-        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[1].personajes_recurrentes)).attr("x", x(series[1].serie) + 50 + 3 * series[1].aventuras).attr("y", y(series[1].personajes_recurrentes)).attr("fill", "white");
-        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[2].personajes_recurrentes)).attr("x", x(series[2].serie) + 50 + 3 * series[2].aventuras).attr("y", y(series[2].personajes_recurrentes));
+        g.append("rect").attr("width", 50).attr("height", y(0) - 90).attr("x", x(series[0].serie) + 50 + 3 * series[0].aventuras).attr("y", 90).attr("fill", "purple");
+        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[0].serie) + 50 + 3 * series[0].aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelo
+        g.append("rect").attr("width", 50).attr("height", y(0) - 90).attr("x", x(series[1].serie) + 50 + 3 * series[1].aventuras).attr("y", 90).attr("fill", "white");
+        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[1].serie) + 50 + 3 * series[1].aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelo
+        g.append("rect").attr("width", 50).attr("height", y(0) - 90).attr("x", x(series[2].serie) + 50 + 3 * series[2].aventuras).attr("y", 90);
+        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[2].serie) + 50 + 3 * series[2].aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelo
         
 
         /* 

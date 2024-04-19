@@ -64,3 +64,24 @@ svg {
 .main_container:hover {
     background-color: #978cff;
 }
+
+
+#legendMangaTrue{
+    background-color: red;
+}
+
+#legendMangaFalse{
+    background-color: blue;
+}
+
+#legendDB{
+    background-color: purple;
+}
+
+#legendDBZ{
+    background-color: black;
+}
+
+#legendDBGT{
+    background-color: white;
+}
