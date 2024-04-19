@@ -61,7 +61,7 @@ function crearSeries() {
 
         g.append("g").attr("transform", `translate(${MARGIN.left}, 0)`).call(d3.axisLeft(y)); // Formato sacado de ayudantía
 
-
+ 
         // añadir libro
 
         // Libro izquierdo + tejuelos
