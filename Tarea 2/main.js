@@ -39,6 +39,8 @@ function crearSeries() {
         // No olvides actualizar los <span> con el "style" de background-color
         // según el color categóricos elegidos. Cada span tiene un ID único.
 
+        const colorScale = d3.scaleOrdinal().domain(series.map(d => d.serie)).range(["purple", "green", "white"]);
+
         // Tamaño
         const width = WIDTH_VIS_1 - MARGIN.left - MARGIN.right;
         const height = HEIGHT_VIS_1 - MARGIN.top - MARGIN.bottom;
@@ -61,36 +63,20 @@ function crearSeries() {
 
         g.append("g").attr("transform", `translate(${MARGIN.left}, 0)`).call(d3.axisLeft(y)); // Formato sacado de ayudantía
 
- 
-        // añadir libro
 
-        // Libro izquierdo + tejuelos
-        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[0].personajes_extras)).attr("x", x(series[0].serie)).attr("y", y(series[0].personajes_extras)).attr("fill", series[0].manga ? "red" : "blue");
-        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[0].serie)).attr("y", y(series[0].personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[1].personajes_extras)).attr("x", x(series[1].serie)).attr("y", y(series[1].personajes_extras)).attr("fill", series[1].manga ? "red" : "blue");
-        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[1].serie)).attr("y", y(series[1].personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        g.append("rect").attr("width", 50).attr("height", y(0) - y(series[2].personajes_extras)).attr("x", x(series[2].serie)).attr("y", y(series[2].personajes_extras)).attr("fill", series[2].manga ? "red" : "blue");
-        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[2].serie)).attr("y", y(series[2].personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelo
-
-        // Definir colores
-        const color_bycap = d3.scaleLinear([0, 300], ["white", "green"])
-
+        // Libro izquierdo
+        g.selectAll(".libro-izquierdo").data(series).join("rect").attr("class", "libro-izquierdo").attr("width", 50).attr("height", d => y(0) - y(d.personajes_extras)).attr("x", d => x(d.serie)).attr("y", d => y(d.personajes_extras)).attr("fill", d => d.manga ? "red" : "blue"); 
+        g.selectAll(".tejuelo-izquierdo").data(series).join("rect").attr("class", "tejuelo-izquierdo").attr("width", 50).attr("height", 5).attr("x", d => x(d.serie)).attr("y", d => y(d.personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelas
+        
         // Libro medio
-        g.append("rect").attr("width", 3 * series[0].aventuras).attr("height", (y(0) - y(series[0].personajes_extras)) / 2).attr("x", x(series[0].serie) + 50).attr("y",y(series[0].personajes_extras) + (y(0) - y(series[0].personajes_extras)) / 2).attr("fill", color_bycap(series[0].cantidad_caps));
-        g.append("rect").attr("width", 3 * series[0].aventuras).attr("height", 5).attr("x", x(series[0].serie) + 50).attr("y",y(series[0].personajes_extras) + (y(0) - y(series[0].personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        g.append("rect").attr("width", 3 * series[1].aventuras).attr("height", (y(0) - y(series[1].personajes_extras)) / 2).attr("x", x(series[1].serie) + 50).attr("y",y(series[1].personajes_extras) + (y(0) - y(series[1].personajes_extras)) / 2).attr("fill", color_bycap(series[1].cantidad_caps));
-        g.append("rect").attr("width", 3 * series[1].aventuras).attr("height", 5).attr("x", x(series[1].serie) + 50).attr("y",y(series[1].personajes_extras) + (y(0) - y(series[1].personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        g.append("rect").attr("width", 3 * series[2].aventuras).attr("height", (y(0) - y(series[2].personajes_extras)) / 2).attr("x", x(series[2].serie) + 50).attr("y",y(series[2].personajes_extras) + (y(0) - y(series[2].personajes_extras)) / 2).attr("fill", color_bycap(series[2].cantidad_caps));
-        g.append("rect").attr("width", 3 * series[2].aventuras).attr("height", 5).attr("x", x(series[2].serie) + 50).attr("y",y(series[2].personajes_extras) + (y(0) - y(series[2].personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        
+        const color_bycap = d3.scaleLinear([0, 300], ["white", "black"]) // Escala de color
+        g.selectAll(".libro-medio").data(series).join("rect").attr("class", "libro-medio").attr("width", d => 3 * d.aventuras).attr("height", d => (y(0) - y(d.personajes_extras)) / 2).attr("x", d => x(d.serie) + 50).attr("y", d => y(d.personajes_extras) + (y(0) - y(d.personajes_extras)) / 2).attr("fill", d => color_bycap(d.cantidad_caps));
+        g.selectAll(".tejuelo-medio").data(series).join("rect").attr("class", "tejuelo-medio").attr("width", d => 3 * d.aventuras).attr("height", 5).attr("x", d => x(d.serie) + 50).attr("y", d => y(d.personajes_extras) + (y(0) - y(d.personajes_extras)) / 2 + 5 + 5).attr("fill", "yellow"); // Tejuelas
+
         // Libro derecho
-        g.append("rect").attr("width", 50).attr("height", y(0) - 90).attr("x", x(series[0].serie) + 50 + 3 * series[0].aventuras).attr("y", 90).attr("fill", "purple");
-        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[0].serie) + 50 + 3 * series[0].aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        g.append("rect").attr("width", 50).attr("height", y(0) - 90).attr("x", x(series[1].serie) + 50 + 3 * series[1].aventuras).attr("y", 90).attr("fill", "white");
-        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[1].serie) + 50 + 3 * series[1].aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        g.append("rect").attr("width", 50).attr("height", y(0) - 90).attr("x", x(series[2].serie) + 50 + 3 * series[2].aventuras).attr("y", 90);
-        g.append("rect").attr("width", 50).attr("height", 5).attr("x", x(series[2].serie) + 50 + 3 * series[2].aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelo
-        
+        g.selectAll(".libro-derecho").data(series).join("rect").attr("class", "libro-derecho").attr("width", 50).attr("height", y(0) - 90).attr("x", d => x(d.serie) + 50 + 3 * d.aventuras).attr("y", 90).attr("fill", d => colorScale(d.serie)); 
+        g.selectAll(".tejuelo-derecho").data(series).join("rect").attr("class", "tejuelo-derecho").attr("width", 50).attr("height", 5).attr("x", d => x(d.serie) + 50 + 3 * d.aventuras).attr("y", 90 + 5 + 5).attr("fill", "yellow"); // Tejuelas
+
 
         /* 
         Cada vez que se haga click en un conjunto de libros. Debes llamar a
