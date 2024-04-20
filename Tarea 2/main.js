@@ -136,22 +136,76 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
         else if (serie == "Dragon Ball GT") {
             return d.Dragon_ball_gt == true;
         }
+
     })
 
     // 1. Filtrar, cuando corresponde, por poder_aumenta > 10
+        
     // Completar aquí
-    console.log(filtrar_dataset)
+    // console.log("data es filtrada", filtrar_dataset)
+    if (filtrar_dataset) {datos = datos.filter(d => d.poder_aumenta > 10)}
+    // console.log("datos filtrados", datos)
 
 
     // 2. Ordenar, según corresponda, los personajes. Completar aquí
     console.log(ordenar_dataset)
 
 
+
+    // https://observablehq.com/@d3/d3-ascending
+    if (ordenar_dataset == "alfabético") {
+        datos = datos.slice().sort((a, b) => d3.ascending(a.personaje, b.personaje))
+        // console.log("Ordenado alfabéticamente", datos)
+    }
+
+    if (ordenar_dataset == "poder_aumenta") {
+        datos = datos.slice().sort((a, b) => d3.descending(a.poder_aumenta, b.poder_aumenta))
+        // console.log("Ordenado por poder", datos)
+    }
+
+
     // 3. Confeccionar la visualización 
     // Todas las escalas deben estar basadas en la información de "datos"
     // y NO en "dataset".
 
-    console.log(datos)
+    // Tamaño
+    const width = WIDTH_VIS_2 - MARGIN.left - MARGIN.right;
+    const height = HEIGHT_VIS_2 - MARGIN.top - MARGIN.bottom;
+
+    // Escalas
+    const larg_cuerpoinf = d3.scaleLog().domain([d3.min(datos, d => d.poder_promedio), d3.max(datos, d => d.poder_promedio)]).range([20, 40]);
+
+    // Colores
+    const color = d3.scaleOrdinal().domain(["Dragon Ball", "Dragon Ball Z", "Dragon Ball GT"]).range(["purple", "white", "green"]);
+
+
+    // Desde aqui en adelante nos basamos en el codigo de la ayudantia
+    // https://github.com/PUC-Infovis/Syllabus-2024-1/blob/main/Ayudantias/Ayudantia_3/data_join.js
+
+    // Visualización
+    const N = 6; // máximo de personajes a mostrar por fila 
+
+    const minicelda_width = width / N;
+    const minicelda_height = 200;
+
+    const g = SVG2.selectAll(".personajes").data(datos).join("g").attr("class", "personajes").attr("transform", (d, i) => `translate(${MARGIN.left + (i % N) * minicelda_width}, ${MARGIN.top + Math.floor(i / N) * minicelda_height})`);
+
+    // Cabeza
+    g.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 50).attr("fill", d => color(d.primera_serie));
+
+    // Cuerpo Superior
+    g.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 90).attr("fill", d => color(d.serie_recurrente));
+    // Es un circulo pero estara la mitad de abajo oculta por la siguiente figura
+
+    // Cuerpo Inferior
+    g.append("rect").attr("width", 40).attr("height", d => larg_cuerpoinf(d.poder_promedio)).attr("x", minicelda_width / 2 - 20).attr("y", 90).attr("fill", d => color(d.ultima_serie));
+
+    
+
+
+
+
+    // console.log(datos)
     // No olvides que está prohibido el uso de loop (no son necesarios)
     // Y debes aplicar correctamente data-join
     // ¡Mucho éxito 😁 !
