@@ -180,7 +180,8 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
 
     // Colores
     const color = d3.scaleOrdinal().domain(["Dragon Ball", "Dragon Ball Z", "Dragon Ball GT"]).range(["purple", "white", "green"]);
-    const color_inf = d3.scaleDiverging(d3.interpolatePRGn).domain([d3.min(datos, d => d.aventuras), d3.median(datos, d => d.aventuras) ,d3.max(datos, d => d.aventuras)]).range(["purple", "green"]);
+    const color_inf = d3.scaleDiverging(d3.interpolatePRGn).domain([d3.min(datos, d => d.aventuras), d3.median(datos, d => d.aventuras), d3.max(datos, d => d.aventuras)]).range(["purple", "green"]);
+    
     // Desde aqui en adelante nos basamos en el codigo de la ayudantia
     // https://github.com/PUC-Infovis/Syllabus-2024-1/blob/main/Ayudantias/Ayudantia_3/data_join.js
 
