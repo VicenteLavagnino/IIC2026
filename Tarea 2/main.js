@@ -174,11 +174,11 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
 
     // Escalas
     const larg_cuerpoinf = d3.scaleLog().domain([d3.min(datos, d => d.poder_promedio), d3.max(datos, d => d.poder_promedio)]).range([20, 40]);
+    const larg_brazo = d3.scaleLog().domain([d3.min(datos, d => d.poder_minimo), d3.max(datos, d => d.poder_minimo)]).range([5, 10]);
 
     // Colores
     const color = d3.scaleOrdinal().domain(["Dragon Ball", "Dragon Ball Z", "Dragon Ball GT"]).range(["purple", "white", "green"]);
-
-
+    const color_inf = d3.scaleDiverging(d3.interpolatePRGn).domain([d3.min(datos, d => d.aventuras), d3.median(datos, d => d.aventuras) ,d3.max(datos, d => d.aventuras)]).range(["purple", "green"]);
     // Desde aqui en adelante nos basamos en el codigo de la ayudantia
     // https://github.com/PUC-Infovis/Syllabus-2024-1/blob/main/Ayudantias/Ayudantia_3/data_join.js
 
@@ -193,14 +193,22 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
     // Cabeza
     g.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 50).attr("fill", d => color(d.primera_serie));
 
+    // Brazo derecho
+    g.append("ellipse").attr("rx", 30).attr("ry", d => larg_brazo(d.poder_minimo)).attr("transform", "rotate(30)").attr("cx", minicelda_width / 2  + 60).attr("cy", 40).attr("fill", "black");
+
     // Cuerpo Superior
     g.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 90).attr("fill", d => color(d.serie_recurrente));
     // Es un circulo pero estara la mitad de abajo oculta por la siguiente figura
 
     // Cuerpo Inferior
-    g.append("rect").attr("width", 40).attr("height", d => larg_cuerpoinf(d.poder_promedio)).attr("x", minicelda_width / 2 - 20).attr("y", 90).attr("fill", d => color(d.ultima_serie));
+    g.append("rect").attr("width", 40).attr("height", d => larg_cuerpoinf(d.poder_promedio)).attr("x", minicelda_width / 2 - 20).attr("y", 90).attr("fill", d => color_inf(d.aventuras));
 
-    
+    // Nombre
+    g.append("text").text(d => d.personaje).attr("x", minicelda_width / 2).attr("y", 10).attr("text-anchor", "middle");
+
+    // Max Poder
+    g.append("text").text("poder maximo").attr("font-size", "10px").attr("x", minicelda_width / 2).attr("y", 150).attr("text-anchor", "middle");
+    g.append("text").text(d => d.poder_maximo).attr("font-size", "8px").attr("x", minicelda_width / 2).attr("y", 165).attr("text-anchor", "middle");
 
 
 
