@@ -197,6 +197,8 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
         // Enter
         enter => { const G = enter.append("g").attr("class", "personajes").attr("transform", (d, i) => `translate(${MARGIN.left + (i % N) * minicelda_width}, ${MARGIN.top + Math.floor(i / N) * minicelda_height})`);
 
+            G.style("opacity", 0).transition().duration(2000).style("opacity", 1);
+
             // Cabeza
             G.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 50).attr("fill", d => color(d.primera_serie));
 
@@ -223,6 +225,8 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
         // Update
         update => {
 
+            update.style("opacity", 0).transition().duration(2000).style("opacity", 1);
+
             update.select("circle").attr("fill", d => color(d.primera_serie));
             update.select("ellipse").attr("ry", d => larg_brazo(d.poder_minimo));
             update.select("circle").attr("fill", d => color(d.serie_recurrente));
@@ -230,14 +234,13 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
             update.select("text").text(d => d.personaje);
             update.select(".poder").text(d => d.poder_maximo);
 
-
             return update;
         }, 
 
         // Exit
         exit => {
 
-            exit.transition().duration(2).attr("transform", "translate(0, 0)").remove();
+            exit.style("opacity", 1).transition().duration(2000).style("opacity", 0).remove();
             return exit
         }
 
