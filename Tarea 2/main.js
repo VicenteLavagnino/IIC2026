@@ -156,6 +156,7 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
     // https://observablehq.com/@d3/d3-ascending
     if (ordenar_dataset == "alfabético") {
         datos = datos.slice().sort((a, b) => d3.ascending(a.personaje, b.personaje))
+
         // console.log("Ordenado alfabéticamente", datos)
     }
 
@@ -189,30 +190,58 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
     const minicelda_width = width / N;
     const minicelda_height = 200;
 
-    const g = SVG2.selectAll(".personajes").data(datos).join("g").attr("class", "personajes").attr("transform", (d, i) => `translate(${MARGIN.left + (i % N) * minicelda_width}, ${MARGIN.top + Math.floor(i / N) * minicelda_height})`);
-    g.exit().remove();
+    // https://github.com/PUC-Infovis/Syllabus-2024-1/blob/main/Codigos/06-Data_Joins_2/programa_3.js
 
-    // Cabeza
-    g.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 50).attr("fill", d => color(d.primera_serie));
+    const G = SVG2.selectAll(".personajes").data(datos).join(
 
-    // Brazo derecho
-    g.append("ellipse").attr("rx", 30).attr("ry", d => larg_brazo(d.poder_minimo)).attr("transform", "rotate(30)").attr("cx", minicelda_width / 2  + 60).attr("cy", 40).attr("fill", "black");
+        // Enter
+        enter => { const G = enter.append("g").attr("class", "personajes").attr("transform", (d, i) => `translate(${MARGIN.left + (i % N) * minicelda_width}, ${MARGIN.top + Math.floor(i / N) * minicelda_height})`);
 
-    // Cuerpo Superior
-    g.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 90).attr("fill", d => color(d.serie_recurrente));
-    // Es un circulo pero estara la mitad de abajo oculta por la siguiente figura
+            // Cabeza
+            G.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 50).attr("fill", d => color(d.primera_serie));
 
-    // Cuerpo Inferior
-    g.append("rect").attr("width", 40).attr("height", d => larg_cuerpoinf(d.poder_promedio)).attr("x", minicelda_width / 2 - 20).attr("y", 90).attr("fill", d => color_inf(d.aventuras));
+            // Brazo derecho
+            G.append("ellipse").attr("rx", 30).attr("ry", d => larg_brazo(d.poder_minimo)).attr("transform", "rotate(30)").attr("cx", minicelda_width / 2  + 60).attr("cy", 40).attr("fill", "black");
 
-    // Nombre
-    g.append("text").text(d => d.personaje).attr("x", minicelda_width / 2).attr("y", 10).attr("text-anchor", "middle");
+            // Cuerpo Superior
+            G.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 90).attr("fill", d => color(d.serie_recurrente));
+            // Es un circulo pero estara la mitad de abajo oculta por la siguiente figura
 
-    // Max Poder
-    g.append("text").text("poder maximo").attr("font-size", "10px").attr("x", minicelda_width / 2).attr("y", 150).attr("text-anchor", "middle");
-    g.append("text").text(d => d.poder_maximo).attr("font-size", "8px").attr("x", minicelda_width / 2).attr("y", 165).attr("text-anchor", "middle");
+            // Cuerpo Inferior
+            G.append("rect").attr("width", 40).attr("height", d => larg_cuerpoinf(d.poder_promedio)).attr("x", minicelda_width / 2 - 20).attr("y", 90).attr("fill", d => color_inf(d.aventuras));
+
+            // Nombre
+            G.append("text").text(d => d.personaje).attr("x", minicelda_width / 2).attr("y", 10).attr("text-anchor", "middle");
+
+            // Max Poder
+            G.append("text").text("poder maximo").attr("font-size", "10px").attr("x", minicelda_width / 2).attr("y", 150).attr("text-anchor", "middle");
+            G.append("text").attr("class", "poder").text(d => d.poder_maximo).attr("font-size", "8px").attr("x", minicelda_width / 2).attr("y", 165).attr("text-anchor", "middle");
+
+            return G;
+        },
+
+        // Update
+        update => {
+
+            update.select("circle").attr("fill", d => color(d.primera_serie));
+            update.select("ellipse").attr("ry", d => larg_brazo(d.poder_minimo));
+            update.select("circle").attr("fill", d => color(d.serie_recurrente));
+            update.select("rect").attr("height", d => larg_cuerpoinf(d.poder_promedio)).attr("fill", d => color_inf(d.aventuras));
+            update.select("text").text(d => d.personaje);
+            update.select(".poder").text(d => d.poder_maximo);
 
 
+            return update;
+        }, 
+
+        // Exit
+        exit => {
+
+            exit.transition().duration(2).attr("transform", "translate(0, 0)").remove();
+            return exit
+        }
+
+    )
 
 
     // console.log(datos)
