@@ -41,6 +41,7 @@ function crearSeries() {
 
         const color_serie = d3.scaleOrdinal().domain(series.map(d => d.serie)).range(["purple", "green", "white"]);
         const color_bycap = d3.scaleLinear([0, 300], ["white", "black"]) // Escala de color
+        const color_bymanga = d3.scaleOrdinal().domain([true, false]).range(["red", "blue"]); // Escala de color
 
 
         // Tamaño
@@ -68,7 +69,7 @@ function crearSeries() {
 
         // Libro izquierdo
         console.log(series)
-        g.selectAll(".libro-izquierdo").data(series).join("rect").attr("class", "libro-izquierdo").attr("width", 50).attr("height", d => y(0) - y(d.personajes_extras)).attr("x", d => x(d.serie)).attr("y", d => y(d.personajes_extras)).attr("fill", d => d.manga ? "red" : "blue"); 
+        g.selectAll(".libro-izquierdo").data(series).join("rect").attr("class", "libro-izquierdo").attr("width", 50).attr("height", d => y(0) - y(d.personajes_extras)).attr("x", d => x(d.serie)).attr("y", d => y(d.personajes_extras)).attr("fill", d => color_bymanga(d.manga)); 
         g.selectAll(".tejuelo-izquierdo").data(series).join("rect").attr("class", "tejuelo-izquierdo").attr("width", 50).attr("height", 5).attr("x", d => x(d.serie)).attr("y", d => y(d.personajes_extras) + 5 + 5).attr("fill", "yellow"); // Tejuelas
         
         // Libro medio
@@ -189,6 +190,7 @@ function crearPersonajes(dataset, serie, filtrar_dataset, ordenar_dataset) {
     const minicelda_height = 200;
 
     const g = SVG2.selectAll(".personajes").data(datos).join("g").attr("class", "personajes").attr("transform", (d, i) => `translate(${MARGIN.left + (i % N) * minicelda_width}, ${MARGIN.top + Math.floor(i / N) * minicelda_height})`);
+    g.exit().remove();
 
     // Cabeza
     g.append("circle").attr("r", 20).attr("cx", minicelda_width / 2).attr("cy", 50).attr("fill", d => color(d.primera_serie));
