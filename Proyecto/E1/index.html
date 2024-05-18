@@ -19,7 +19,7 @@
 
         <div class="response">
             <h3>Integrantes</h2>
-                <p>Vicente Lavagnino</p>
+                <p>Vicente Lavagnino Gatica</p>
         </div>
 
         <div class="case">
@@ -28,25 +28,34 @@
                 <h4>Contexto de la situación y la naturaleza de los datos</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>La Comisión para el Mercado Financiero (CMF) es una institución autónoma del estado de Chile que se dedica a supervisar y regular los mercados financieros, además esta institución tiene como responsabilidad promover la transparencia y la divulgación de datos económicos para asegurar mayor confianza en el sector. </p>
+                <p>Por otra parte, el Observatorio Social es una unidad perteneciente al Ministerio de Desarrollo Social y Vivienda en Chile, su principal función es recopilar, analizar y difundir información relevante sobre las condiciones sociales y económicas de la población chilena.</p>
+                <p>Además, en Chile existe una gran desigualdad entre comunas, esto no solo nos habla de la distribución de ingresos entre las distintas comunas del país, sino que también se refleja en el acceso que tienen estas distintas localidades a servicios básico y particulares como lo son los casos de las instituciones financieras y cajeros automáticos.</p>
+                <p>En esta línea, es crucial la visualización de esta información y datos de una manera adecuada para poder ser trabajada de manera más fácil tanto por expertos en políticas del sector público, como de analistas del sector privado que busquen presentar nuevos sectores estratégicos para su insdutria conseguir mayores utilidades o captación de nuevos clientes.</p>
+                <p>De esta forma, nace la idea de presentar los datos de estimación de pobreza comunal del Observatorio Social junto a los informes de la CMF en cuanto a la cantidad de cajeros automáticos e instituciones financieras por comuna.</p>
             </div>
             <div class="response">
                 <h4>Fuente original de los datos</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p><a href="https://observatorio.ministeriodesarrollosocial.gob.cl/pobreza-comunal-2022"> Pobreza Comunal</a></p>
+                <p><a href="https://www.cmfchile.cl/portal/estadisticas/617/w3-propertyvalue-29564.html"> Cajeros por Comuna</a></p>
+                <p><a href="https://www.cmfchile.cl/portal/estadisticas/617/w3-propertyvalue-29567.html"> Instituciones Financieras por Comuna</a></p>
             </div>
             <div class="response">
                 <h4>Usuario objetivo</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>Los usuarios objetivos son analistas de políticas públicas, investigadores sociales y analistas del sector financiero privado que busquen ver de manera más simplificada los datos y la distribución de estos atributos según las comunas de Chile para posteriormente utilizar esta información para sus distintas decisiones a nivel estatal y privado en cuanto a la implementación de nuevos servicios.</p>
             </div>
             <div class="response">
                 <h4>Uso de la herramienta</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>La herramienta se utilizará para:</p>
+                <p>1. Visualizar y comparar la distribución geográfica de la pobreza y la infraestructura bancaria.</p>
+                <p>2. Identificar comunas con altos niveles de pobreza y baja accesibilidad a servicios bancarios.</p>
+                <p>3. Facilitar la toma de decisiones en la formulación de políticas públicas y programas de intervención pública y privada.</p>
             </div>
 
         </div>
@@ -57,13 +66,27 @@
                 <h4>Tipos de datos a utilizar en el proyecto</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>Por una parte, se trabajará con los datasets presentados por la CMF y el Observatorio Social del mismo año, los cuales son de tipo tabular. Por otra parte se usarán los SVG del territorio chileno a nivel comunal y regional los cuales son de elaboración personal.</p>
+                <p>De estos datasets tenemos los datos singulares, los cuales son:</p>
+                <p>Comuna (Ítem): Cada comuna de Chile representa un ítem singular en tu dataset. Las comunas tienen varios atributos asociados que describen diferentes aspectos de cada ítem.</p>
+                <p>Posición Geográfica (Posición): Las coordenadas geográficas de cada comuna, que se utilizarán para representar las comunas en el mapa.</p>
+                <p>Atributos: Los atributos son las características específicas de cada ítem (comuna), estos se detallan a continuación.</p>
             </div>
             <div class="response">
                 <h4>Tipos de atributos presente en los datos</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>Número de Sucursales de Banco: Es de tipo cuantitativo e indica el número de sucursales de banco en cada comuna.</p>
+                <p>Número de Cajeros Automáticos: Es de tipo cuantitativo e indica el número de cajeros automáticos en cada comuna.</p>
+                <p>Porcentaje de Población en Situación de Pobreza: Es de tipo cunatitativo e indica el porcentaje de la población de la comuna que se encuentra en situación de pobreza.</p>
+                <p>Nombre de la Comuna: Es de tipo categórico e indica el nombre de cada comuna.</p>
+
+                <p>Datos derivados:</p>
+                <p>Relación entre Pobreza y Sucursales Bancarias:</p>
+                <p>Es de tipo cuantitativo y es la proporción de sucursales bancarias por porcentaje de pobreza.</p>
+
+                <p>Relación entre Pobreza y Cajeros Automáticos:</p>
+                <p>Es de tipo cuantitativo y es la proporción de cajeros automáticos por porcentaje de pobreza.</p>
             </div>
         </div>
 
@@ -78,10 +101,10 @@
                     feature, caminos, topología, extremos, entre otros.
                 </p>
 
-                <h4>Acción: [una palabra]</h4>
-                <h4>Objetivo: [una palabra]</h4>
+                <h4>Acción: Explorar</h4>
+                <h4>Objetivo: Distribución</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Justificar la acción-objetivo con el dominio presentado: </p>
+                <p> Explorar cómo se distribuyen geográficamente las estimaciones de pobreza y la infraestructura bancaria en las comunas de Chile permite identificar áreas de interés y posibles correlaciones para análisis más detallados.</p>
             </div>
             <div class="response">
                 <h4>Tarea 2 (acción + objetivo) + justificación según el dominio presentado</h4>
@@ -92,10 +115,10 @@
                     feature, caminos, topología, extremos, entre otros.
                 </p>
 
-                <h4>Acción: [una palabra]</h4>
-                <h4>Objetivo: [una palabra]</h4>
+                <h4>Acción: Comparar</h4>
+                <h4>Objetivo: Proporción</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Justificar la acción-objetivo con el dominio presentado: </p>
+                <p>Comparar la proporción de sucursales bancarias y cajeros automáticos en relación con los niveles de pobreza en distintas comunas ayuda a identificar desigualdades en el acceso a servicios financieros.</p>
             </div>
             <div class="response">
                 <h4>Tarea 3 (acción + objetivo) + justificación según el dominio presentado</h4>
@@ -106,10 +129,10 @@
                     feature, caminos, topología, extremos, entre otros.
                 </p>
 
-                <h4>Acción: [una palabra]</h4>
-                <h4>Objetivo: [una palabra]</h4>
+                <h4>Acción: Identificar</h4>
+                <h4>Objetivo: Outliers</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Justificar la acción-objetivo con el dominio presentado: </p>
+                <p>Identificar comunas que son outliers en términos de alta pobreza y baja infraestructura bancaria puede resaltar áreas que requieren intervenciones específicas y urgentes.</p>
             </div>
             <div class="response">
                 <h4>(Opcional) Tareas adicionales</h4>
@@ -123,24 +146,58 @@
                 <h4>Decisiones de diseño relacionadas a la primera tarea visual</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>Mapa de Coropleta (Decisión de diseño)</p>
+                <p>Marcas: Polígonos para representar las comunas.</p>
+                <p>Canales: Intensidad del color del polígono para indicar el nivel de pobreza (cuanto más oscuro, mayor pobreza).</p>
+                <p>Idioms: Implementar una leyenda de colores para la escala de pobreza.</p>
+                <p>Interacción:
+                    <ul>
+                        <li>Zoom y Panning: Permitir zoom y panning para explorar el mapa y ver detalles de áreas específicas.</li>
+                        <li>Interacción con el Mouse: Permitir a los usuarios hacer clic en una comuna para seleccionar y obtener más información detallada en un tooltip, que muestre el porcentaje de pobreza y el número de cajeros automáticos.</li>
+                        <li>Vistas Coordinadas: Implementar coordinación con el gráfico de barras agrupadas para actualizar la información mostrada según la selección en el mapa.</li>
+                    </ul>
+                </p>
+
             </div>
             <div class="response">
                 <h4>Decisiones de diseño relacionadas a la segunda tarea visual</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>Gráfico de Barras Agrupado (Decisión de diseño)</p>
+                <p>Marcas: Barras agrupadas para representar la proporción de sucursales bancarias y cajeros automáticos.</p>
+                <p>Canales: Diferentes colores en las barras para sucursales y cajeros y escala adicional para el porcentaje de pobreza.</p>
+                <p>Idioms: Implementar una leyenda para los colores que representan sucursales y cajeros.</p>
+                <p>Interacción:
+                    <ul>
+                        <li>Filtros: Incluir filtros para permitir a los usuarios seleccionar comunas específicas o rangos de pobreza. Estos filtros no estarán activados por zoom, sino que se implementarán mediante controles de interfaz adicionales.</li>
+                        <li>Interacción con el Mouse: Permitir a los usuarios hacer clic en una comuna para seleccionar y obtener más información detallada en un tooltip, que muestre el porcentaje de pobreza y el número de cajeros automáticos y sucursales bancarias</li>
+                        <li>Selección de Múltiples Datos (Brush): Implementar una opción de brush para seleccionar múltiples comunas a la vez.</li>
+                        <li>Vistas Coordinadas: Implementar coordinación con el mapa de coropleta para que cualquier selección en el gráfico de barras actualice el mapa, resaltando las comunas seleccionadas.</li>
+                    </ul>
+                </p>
             </div>
             <div class="response">
                 <h4>Decisiones de diseño relacionadas a la tercera tarea visual</h4>
                 <h4>Respuesta:</h4>
                 <!-- Puedes agregar los P que sean necesarios -->
-                <p>Modifica solo este texto (no el de arriba) para poner tu respuesta</p>
+                <p>Gráfico de Dispersión: (Decisión de diseño)</p>
+                <p>Marcas: Puntos para representar comunas.</p>
+                <p>Canales: Eje X para el número de sucursales/cajeros, eje Y para el porcentaje de pobreza, tamaño del punto para indicar la población total de la comuna.</p>
+                <p>Idioms: Implementar una leyenda para el tamaño de los puntos.</p>
+                <p>Interacción:
+                    <ul>
+                        <li>Filtros: para ajustar el rango de pobreza o infraestructura bancaria visible.</li>
+                        <li>Interacción con el Mouse: Al hacer clic en un punto, mostrar información detallada sobre la comuna.</li>
+                        <li>Vistas Coordinadas: Implementar coordinación con el mapa de coropleta y de barras para que cualquier selección en el gráfico actualice el mapa y las barras, resaltando las comunas seleccionadas.</li>
+                    </ul>
+                </p>
             </div>
 
             <div class="response">
                 <h4>(Opcional) Decisiones de diseño relacionadas a tareas adicionales</h4>
-                <p>Puede incluir aquí las decisiones de diseño relacionadas a las tareas visuales adicionales</p>
+                <p>Partición en 2 vistas (Decisión de diseño):</p>
+                <p>Se decide separar la información en 2 visualizaciones a modo de facilitar la comprensión de usuario y no saturar de información.</p>
+                <p></p>
             </div>
         </div>
 
