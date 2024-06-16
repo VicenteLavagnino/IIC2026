@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Proyecto - Vicente Lavagnino</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <header class="intro">
+            
+            <div class="info">
+                <h2 class="name">Vicente Lavagnino</h2>
+                <h3 class="course">IIC2026 - Visualización de la Información</h3>
+            </div>
+
+            <div class="project-name">
+                <h2>Pobreza e Infraestructura  en Chile</h2>
+            </div>
+        </header>
+
+        <section>
+            <h2>Introducción</h2>
+            <p>La Comisión para el Mercado Financiero (CMF) es una institución autónoma del estado de Chile que se dedica a supervisar y regular los mercados financieros, además esta institución tiene como responsabilidad promover la transparencia y la divulgación de datos económicos para asegurar mayor confianza en el sector. </p>
+            <p>Por otra parte, el Observatorio Social es una unidad perteneciente al Ministerio de Desarrollo Social y Vivienda en Chile, su principal función es recopilar, analizar y difundir información relevante sobre las condiciones sociales y económicas de la población chilena.</p>
+            <p>Además, en Chile existe una gran desigualdad entre comunas, esto no solo nos habla de la distribución de ingresos entre las distintas comunas del país, sino que también se refleja en el acceso que tienen estas distintas localidades a servicios básico y particulares como lo son los casos de las instituciones financieras y cajeros automáticos.</p>
+            <p>En esta línea, es crucial la visualización de esta información y datos de una manera adecuada para poder ser trabajada de manera más fácil tanto por expertos en políticas del sector público, como de analistas del sector privado que busquen presentar nuevos sectores estratégicos para su industria conseguir mayores utilidades o captación de nuevos clientes.</p>
+            <p>De esta forma, nace la idea de presentar los datos de estimación de pobreza comunal del Observatorio Social junto a los informes de la CMF en cuanto a la cantidad de cajeros automáticos e instituciones financieras por comuna.</p>        </section>
+
+        <section>
+            <h2>Primera Visualización: Mapa de Coropleta</h2>
+            <p>El mapa de coropleta muestra la distribución geográfica de la pobreza en las comunas de Chile. Cada comuna está coloreada según su nivel de pobreza, proporcionando una visión clara de las áreas más afectadas.</p>
+            <div class="visualization">
+                <svg id="map"></svg>
+            </div>
+            <script src="js/vis1.js"></script>
+        </section>
+
+        <section>
+            <h2>Segunda Visualización: Gráfico de Barras Agrupado</h2>
+            <p>Este gráfico de barras agrupado muestra la cantidad de cajeros automáticos y sucursales bancarias en cada comuna, comparando estos datos con los niveles de pobreza.</p>
+            <div class="visualization">
+                <svg id="bar-chart"></svg>
+            </div>
+            <script src="js/vis2.js"></script>
+        </section>
+
+        <section>
+            <h2>Tercera Visualización: Gráfico de Dispersión</h2>
+            <p>El gráfico de dispersión representa la relación entre el número de sucursales/cajeros y el porcentaje de pobreza en cada comuna. El tamaño del punto indica la población total de la comuna.</p>
+            <div class="visualization">
+                <svg id="scatter-plot"></svg>
+            </div>
+            <script src="js/vis3.js"></script>
+        </section>
+
+        <footer>
+            <h2>Conclusiones</h2>
+            <p>Las visualizaciones desarrolladas permiten entender mejor la relación entre la pobreza y la infraestructura bancaria en Chile, identificando áreas que requieren mayor atención y recursos. Estas herramientas pueden ser útiles para analistas de políticas públicas y el sector privado en la toma de decisiones informadas.</p>
+
+            <h3>Referencias</h3>
+            <p>
+                <a href="https://observatorio.ministeriodesarrollosocial.gob.cl/pobreza-comunal-2022">Pobreza Comunal</a>
+                <a href="https://www.cmfchile.cl/portal/estadisticas/617/w3-propertyvalue-29564.html">Cajeros por Comuna</a>
+                <a href="https://www.cmfchile.cl/portal/estadisticas/617/w3-propertyvalue-29567.html">Instituciones Financieras por Comuna</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
