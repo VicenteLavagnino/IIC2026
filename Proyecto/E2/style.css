@@ -3,8 +3,8 @@
 /* Estilos generales */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #1a237e;
-    color: #283593;
+    background-color: #283593;
+    color: #ffff;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ body {
     max-width: 1500px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: #303f9f;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -24,7 +24,7 @@ body {
 /* Encabezados */
 h1, h2, h3 {
     margin-bottom: 20px;
-    color: #1a237e;
+    color: #ffb300;
     margin: 0;
 
 }
@@ -55,7 +55,7 @@ svg {
 /* Enlaces */
 a {
     text-decoration: none;
-    color: #3498db;
+    color: #fdd835;
     display: block;
     transition-duration: 0.3s;
 }
