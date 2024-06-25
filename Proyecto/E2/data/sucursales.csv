@@ -1,0 +1,346 @@
+﻿Region;Comuna;Total;Banco Bice;Banco BTG Pactual Chile;Banco Consorcio;Banco de Chile;Banco de Credito e Inversiones;Banco del Estado de Chile;Banco Falabella;Banco Internacional;Banco Itaú Chile;Banco Ripley;Banco Santander-Chile;Banco Security;China Construction Bank;Hsbc Bank (Chile);Jp Morgan Chase Bank. N. A.;Scotiabank Chile;Bank of China
+Tarapacá    ;Iquique;21;0;0;1;3;4;2;1;1;3;0;3;0;0;0;0;3;0
+Tarapacá    ;Alto Hospicio;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+Tarapacá    ;Pozo Almonte;2;0;0;0;0;0;2;0;0;0;0;0;0;0;0;0;0;0
+Tarapacá;Camiña;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Tarapacá;Colchane;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Tarapacá;Huara;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Tarapacá    ;Pica;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Antofagasta;Antofagasta;26;1;0;1;5;4;5;1;1;1;0;3;1;0;0;0;3;0
+Antofagasta;Mejillones;2;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0
+Antofagasta;Sierra Gorda;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Antofagasta;Taltal;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Antofagasta;Calama;15;0;0;0;3;3;3;2;0;1;0;2;0;0;0;0;1;0
+Antofagasta;Ollagüe;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Antofagasta;San Pedro de Atacama;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+Antofagasta;Tocopilla;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+Antofagasta;María Elena;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Atacama;Copiapó;15;0;0;0;2;2;3;2;0;1;1;2;1;0;0;0;1;0
+Atacama;Caldera;2;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0
+Atacama;Tierra Amarilla;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Atacama;Chañaral;2;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0
+Atacama;Diego de Almagro;3;0;0;0;0;1;2;0;0;0;0;0;0;0;0;0;0;0
+Atacama;Vallenar;5;0;0;0;1;1;1;0;0;1;0;1;0;0;0;0;0;0
+Atacama;Alto Del Carmen;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Atacama;Freirina;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Atacama;Huasco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;La Serena;22;0;0;1;4;2;6;2;0;2;0;3;1;0;0;0;1;0
+Coquimbo;Coquimbo;11;0;0;0;1;1;4;1;0;1;1;1;0;0;0;0;1;0
+Coquimbo;Andacollo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;La Higuera;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Paiguano;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Vicuña;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Illapel;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Canela;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Los Vilos;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Salamanca;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Ovalle;8;0;0;0;1;1;2;1;0;1;0;1;0;0;0;0;1;0
+Coquimbo;Combarbalá;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Monte Patria;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Punitaqui;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Coquimbo;Río Hurtado;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Valparaíso;22;0;0;0;5;1;4;1;0;2;0;6;0;0;0;0;3;0
+Valparaíso;Casablanca;4;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;0;0
+Valparaíso;Concón;5;0;0;0;2;1;1;0;0;0;0;1;0;0;0;0;0;0
+Valparaíso;Juan Fernández;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Puchuncaví;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Quintero;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Viña del Mar;38;1;0;1;8;4;7;1;1;5;0;4;1;0;0;0;5;0
+Valparaíso;Isla de Pascua;2;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0
+Valparaíso;Los Andes;8;0;0;0;1;2;1;1;0;1;0;1;0;0;0;0;1;0
+Valparaíso;Calle Larga;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Rinconada;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;San Esteban;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;La Ligua;4;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;0;0
+Valparaíso;Cabildo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Papudo;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Petorca;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Zapallar;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Quillota;8;0;0;0;1;1;2;1;0;1;0;1;0;0;0;0;1;0
+Valparaíso;Calera;5;0;0;0;1;1;1;1;0;0;0;1;0;0;0;0;0;0
+Valparaíso;Hijuelas;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;La Cruz;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Nogales;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;San Antonio;10;0;0;0;2;2;2;1;0;1;0;1;0;0;0;0;1;0
+Valparaíso;Algarrobo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Cartagena;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;El Quisco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;El Tabo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Santo Domingo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;San Felipe;7;0;0;0;1;1;1;1;0;1;0;1;0;0;0;0;1;0
+Valparaíso;Catemu;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Llaillay;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Panquehue;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Putaendo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Santa María;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Quilpué;8;0;0;0;2;1;2;1;0;1;0;1;0;0;0;0;0;0
+Valparaíso;Limache;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+Valparaíso;Olmué;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Valparaíso;Villa Alemana;7;0;0;0;1;1;1;1;0;1;0;1;0;0;0;0;1;0
+O'Higgins;Rancagua;22;1;0;1;4;2;5;2;0;2;0;2;1;0;0;0;2;0
+ O'Higgins;Codegua;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+ O'Higgins;Coinco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Coltauco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Doñihue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Graneros;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Las Cabras;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Machalí;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Malloa;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Mostazal;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Olivar;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Peumo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Pichidegua;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Quinta de Tilcoco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Rengo;5;0;0;0;1;1;1;1;0;0;0;1;0;0;0;0;0;0
+O'Higgins;Requínoa;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;San Vicente;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+O'Higgins;Pichilemu;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+ O'Higgins;La Estrella;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Litueche;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Marchihue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Navidad;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Paredones;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;San Fernando;8;0;0;0;2;1;1;1;0;1;0;1;0;0;0;0;1;0
+O'Higgins;Chépica;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Chimbarongo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+ O'Higgins;Lolol;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Nancagua;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+ O'Higgins;Palmilla;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Peralillo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Placilla;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+ O'Higgins;Pumanque;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+O'Higgins;Santa Cruz;5;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;1;0
+Maule;Talca;23;1;0;1;4;2;4;1;0;2;1;4;1;0;0;0;2;0
+Maule;Constitución;5;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;1;0
+Maule;Curepto;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Empedrado;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Maule;Maule;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Pelarco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Pencahue;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Maule;Río Claro;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;San Clemente;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;San Rafael;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Cauquenes;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+Maule;Chanco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Pelluhue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Curicó;13;0;0;0;2;3;2;1;0;1;1;2;0;0;0;0;1;0
+Maule;Hualañé;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Licantén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Molina;2;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Rauco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Maule;Romeral;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Sagrada Familia;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Teno;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Vichuquén;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Maule;Linares;7;0;0;0;1;1;1;1;0;1;0;1;0;0;0;0;1;0
+Maule;Colbún;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Longaví;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Parral;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+Maule;Retiro;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;San Javier;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+Maule;Villa Alegre;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Maule;Yerbas Buenas;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Concepción;33;1;0;1;7;2;5;1;1;5;0;5;1;0;0;0;4;0
+Biobío;Coronel;6;0;0;0;1;1;2;1;0;0;0;1;0;0;0;0;0;0
+Biobío;Chiguayante;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Florida;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Hualqui;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Lota;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Penco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;San Pedro de la Paz;8;1;0;0;2;1;1;0;0;1;0;1;0;0;0;0;1;0
+Biobío;Santa Juana;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Talcahuano;18;0;0;0;3;3;3;1;0;2;0;4;0;0;0;0;2;0
+Biobío;Tomé;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Hualpén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Lebu;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Arauco;2;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0
+Biobío;Cañete;2;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Contulmo;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Curanilahue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Los Álamos;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Tirúa;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Los Ángeles;12;1;0;0;2;1;2;1;0;2;0;2;0;0;0;0;1;0
+Biobío;Antuco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Cabrero;2;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Laja;2;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0
+Biobío;Mulchén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Nacimiento;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Negrete;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Quilaco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Quilleco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Biobío;San Rosendo;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Santa Bárbara;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Tucapel;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Yumbel;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Biobío;Alto Biobío;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Temuco;24;1;0;1;7;2;4;1;0;2;0;2;1;0;0;0;3;0
+La Araucanía;Carahue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Cunco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Curarrehue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Freire;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Galvarino;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Gorbea;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Lautaro;2;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0
+La Araucanía;Loncoche;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Melipeuco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Nueva Imperial;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Padre Las Casas;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Perquenco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Pitrufquén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Pucón;4;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;0;0
+La Araucanía;Saavedra;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Teodoro Schmidt;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Toltén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Vilcún;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Villarrica;7;0;0;0;1;1;1;1;0;1;0;1;0;0;0;0;1;0
+La Araucanía;Cholchol;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Angol;5;0;0;0;1;1;1;1;0;0;0;1;0;0;0;0;0;0
+La Araucanía;Collipulli;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Curacautín;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Ercilla;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Lonquimay;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Los Sauces;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Lumaco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Purén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Renaico;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+La Araucanía;Traiguén;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+La Araucanía;Victoria;4;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;0;0
+Los Lagos;Puerto Montt;23;1;0;1;3;3;3;2;0;2;0;5;1;0;0;0;2;0
+Los Lagos;Calbuco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Cochamó;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Fresia;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Frutillar;2;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0
+Los Lagos;Los Muermos;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Llanquihue;3;0;0;0;0;1;1;0;0;0;0;1;0;0;0;0;0;0
+Los Lagos;Maullín;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Puerto Varas;5;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;1;0
+Los Lagos;Castro;5;0;0;0;1;1;1;1;0;0;0;1;0;0;0;0;0;0
+Los Lagos;Ancud;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Chonchi;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Curaco De Vélez;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Dalcahue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Puqueldón;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Queilén;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Quellón;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Quemchi;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Quinchao;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Osorno;11;1;0;0;2;1;2;1;0;1;1;1;0;0;0;0;1;0
+Los Lagos;Puerto Octay;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Purranque;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+Los Lagos;Puyehue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Río Negro;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;San Juan De La Costa;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;San Pablo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Chaitén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Futaleufú;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Hualaihué;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Lagos;Palena;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Aysén;Coyhaique;7;0;0;0;1;1;1;1;0;1;0;1;0;0;0;0;1;0
+Aysén;Lago Verde;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Aysén;Aysén;4;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;0;0
+Aysén;Cisnes;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Aysén;Guaitecas;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Aysén;Cochrane;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Aysén;O’higgins;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Aysén;Tortel;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Aysén;Chile Chico;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Aysén;Río Ibáñez;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;Punta Arenas;18;0;0;0;3;5;3;1;0;2;1;2;0;0;0;0;1;0
+Magallanes;Laguna Blanca;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;Río Verde;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;San Gregorio;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;Cabo De Hornos;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;Porvenir;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;Primavera;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;Timaukel;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Magallanes;Natales;4;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;0;0
+Magallanes;Torres Del Paine;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Santiago;84;1;0;2;16;10;21;5;1;6;3;12;1;0;0;0;6;0
+Metropolitana;Cerrillos;12;0;0;0;2;2;2;1;0;1;0;2;0;0;0;0;2;0
+Metropolitana;Cerro Navia;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Conchalí;9;0;0;0;1;1;2;0;1;1;0;1;1;0;0;0;1;0
+Metropolitana;El Bosque;3;0;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Estación Central;7;0;0;0;2;0;4;0;0;0;0;1;0;0;0;0;0;0
+Metropolitana;Huechuraba;15;1;0;0;4;2;1;1;1;1;0;2;1;0;0;0;1;0
+Metropolitana;Independencia;7;0;0;0;1;1;2;1;0;0;0;2;0;0;0;0;0;0
+Metropolitana;La Cisterna;5;0;0;0;1;1;1;1;0;0;0;1;0;0;0;0;0;0
+Metropolitana;La Florida;20;0;0;0;4;2;7;1;0;1;0;3;0;0;0;0;2;0
+Metropolitana;La Granja;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;La Pintana;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;La Reina;15;0;0;0;4;2;3;1;0;2;0;1;1;0;0;0;1;0
+Metropolitana;Las Condes;95;5;1;3;22;14;5;4;2;10;2;13;2;1;1;1;9;0
+Metropolitana;Lo Barnechea;17;2;0;0;4;3;2;0;0;2;0;2;1;0;0;0;1;0
+Metropolitana;Lo Espejo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Lo Prado;2;0;0;0;0;0;2;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Macul;8;0;0;0;2;1;2;0;0;1;0;2;0;0;0;0;0;0
+Metropolitana;Maipú;17;0;0;1;2;2;6;2;0;1;0;1;0;0;0;0;2;0
+Metropolitana;Ñuñoa;22;0;0;0;2;3;6;1;0;2;0;5;0;0;0;0;3;0
+Metropolitana;Pedro Aguirre Cerda;3;0;0;0;0;1;2;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Peñalolén;9;0;0;0;2;1;1;0;0;1;0;2;0;0;0;0;2;0
+Metropolitana;Providencia;39;1;0;0;15;5;5;1;1;2;0;3;1;0;0;0;4;1
+Metropolitana;Pudahuel;5;0;0;0;1;1;1;0;0;0;0;2;0;0;0;0;0;0
+Metropolitana;Quilicura;5;0;0;0;2;2;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Quinta Normal;2;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Recoleta;7;0;0;0;2;1;2;0;0;0;0;1;0;0;0;0;1;0
+Metropolitana;Renca;5;0;0;0;1;1;2;0;0;0;0;1;0;0;0;0;0;0
+Metropolitana;San Joaquín;8;0;0;0;2;1;1;0;1;0;0;1;0;0;0;0;2;0
+Metropolitana;San Miguel;8;0;0;0;2;1;1;0;0;1;0;2;0;0;0;0;1;0
+Metropolitana;San Ramón;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Vitacura;36;3;0;1;12;5;3;0;1;4;0;3;1;0;0;0;3;0
+Metropolitana;Puente Alto;18;0;0;1;3;2;4;2;0;2;0;2;0;0;0;0;2;0
+Metropolitana;Pirque;2;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;San José de Maipo;2;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Colina;11;0;0;0;3;2;1;1;0;1;0;2;0;0;0;0;1;0
+Metropolitana;Lampa;3;0;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Tiltil;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;San Bernardo;14;0;0;0;2;2;4;2;0;1;0;2;0;0;0;0;1;0
+Metropolitana;Buin;5;0;0;0;1;1;1;1;0;0;0;1;0;0;0;0;0;0
+Metropolitana;Calera de Tango;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Paine;2;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Melipilla;8;0;0;0;1;1;2;1;0;1;0;1;0;0;0;0;1;0
+Metropolitana;Alhué;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Curacaví;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;María Pinto;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;San Pedro;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Talagante;6;0;0;0;1;1;1;1;0;0;0;1;0;0;0;0;1;0
+Metropolitana;El Monte;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Isla de Maipo;2;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Padre Hurtado;2;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0
+Metropolitana;Peñaflor;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+Los Ríos;Valdivia;16;0;0;0;3;2;4;1;0;1;1;3;0;0;0;0;1;0
+Los Ríos;Corral;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Lanco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Los Lagos;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Máfil;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Mariquina;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Paillaco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Panguipulli;3;0;0;0;0;1;1;0;0;0;0;1;0;0;0;0;0;0
+Los Ríos;La Unión;4;0;0;0;1;1;1;0;0;0;0;1;0;0;0;0;0;0
+Los Ríos;Futrono;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Lago Ranco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Los Ríos;Río Bueno;2;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0
+Arica y Parinacota;Arica;14;0;0;0;2;2;4;1;0;1;1;2;0;0;0;0;1;0
+Arica y Parinacota;Camarones;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Arica y Parinacota;Putre;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Arica y Parinacota;General Lagos;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Chillán;11;0;0;0;2;1;3;1;0;1;0;2;0;0;0;0;1;0
+Ñuble;Bulnes;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Chillán Viejo;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;El Carmen;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Pemuco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Pinto;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Quillón;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;San Ignacio;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Yungay;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Quirihue;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Cobquecura;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Coelemu;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Ninhue;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Portezuelo;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Ránquil;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Treguaco;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;San Carlos;3;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0
+Ñuble;Coihueco;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;Ñiquén;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;San Fabián;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+Ñuble;San Nicolás;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0

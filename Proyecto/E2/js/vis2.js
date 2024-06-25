@@ -1,108 +1,166 @@
-const APPLE = "https://gist.githubusercontent.com/Hernan4444/d500438113d5eedc297f9c207fb03337/raw/474e0494400b27b96f381b04048deab5c8c586b9/Apple.csv"
-const SONY = "https://gist.githubusercontent.com/Hernan4444/d500438113d5eedc297f9c207fb03337/raw/474e0494400b27b96f381b04048deab5c8c586b9/Sony.csv"
+console.log("Cargando vis2.js");
 
-const data_path = APPLE;
+const WIDTH2 = 1000;
+const HEIGHT2 = 800;
+const MARGIN = { top: 20, right: 30, bottom: 100, left: 50 };
 
+const svg2 = d3.select("#bar-chart")
+    .append("svg")
+    .attr("width", WIDTH2 + MARGIN.left + MARGIN.right)
+    .attr("height", HEIGHT2 + MARGIN.top + MARGIN.bottom)
+    .append("g")
+    .attr("transform", `translate(${MARGIN.left},${MARGIN.top})`);
 
-// COMPLETAR CON CÓDIGO JS y D3.JS NECESARIO
+// https://using-d3js.com/03_01_d3_fetch.html y https://stackoverflow.com/questions/27420887/d3-replacing-semicolon-with-comma, luego se utilizó sugerencia de copilot para reemplazar comas por puntos
+Promise.all([
+    d3.dsv(";", "data/pobreza_ingreso.csv"),
+    d3.dsv(";", "data/sucursales.csv")
+]).then(function([data1, data2]) {
+    console.log("Datos cargados correctamente");
+    console.log("Data 1:", data1);
+    console.log("Data 2:", data2);
 
-const WIDTH = 900;
-const HEIGHT = 600;
+    const columnas1 = Object.keys(data1[0]);
+    const columnas2 = Object.keys(data2[0]);
 
-// Función para parsear los datos, luego esto se lo pasamos a d3.csv
-const parseo = row => {
-    return {
-        date: d3.timeParse("%Y-%m-%d")(row.fecha),
-        start: parseFloat(row.inicio),
-        max: parseFloat(row.maximo),
-        min: parseFloat(row.minimo),
-        end: parseFloat(row.fin),
-    }
-}
-
-// Función para leer y preprocesar los datos
-function preprocessingBarchartDataset(data) {
-
-    // console.log(data);
-
-    d3.csv(data, parseo).then(function (data) {
-
-        // Ver los datos parseados
-        // console.log(data);
-
-        /* Ordenamos la información por fechas */
-        let sortedData = data.sort((a, b) => d3.ascending(a.date, b.date));
-
-        // Llamamos a nuestra función que genera la visualización
-        barplot(sortedData);
+    const processedData1 = data1.map(d => {
+        const pobreza = parseFloat(d[columnas1[2]].replace(",", "."));
+        return {
+            comuna: d[columnas1[1]].trim().toLowerCase(),
+            region: d[columnas1[0]].trim(),
+            pobreza: isNaN(pobreza) ? 0 : pobreza
+        };
     });
-}
 
+    const processedData2 = data2.map(d => {
+        const totalSucursales = columnas2.slice(2).reduce((acc, key) => {
+            const valor = parseFloat(d[key].replace(",", "."));
+            return acc + (isNaN(valor) ? 0 : valor);
+        }, 0);
+        return {
+            comuna: d[columnas2[1]].trim().toLowerCase(),
+            region: d[columnas2[0]].trim(),
+            sucursales: totalSucursales
+        };
+    });
 
-function barplot(parsed_data) {
+    const combinedData = processedData1.map(d => {
+        const match = processedData2.find(e => e.comuna === d.comuna && e.region === d.region);
+        return {
+            comuna: d.comuna,
+            region: d.region,
+            pobreza: d.pobreza * 100,
+            sucursales: match ? match.sucursales : 0
+        };
+    });
 
-    // Ver los datos
-    // console.log(parsed_data);
+    console.log("Datos combinados:", combinedData);
 
-    // SETEAR LA VISUALIZACION
+    const regions = Array.from(new Set(combinedData.map(d => d.region)));
 
-    const margin = { top: 20, right: 50, bottom: 30, left: 50 },
-        width = WIDTH - margin.left - margin.right,
-        height = HEIGHT - margin.top - margin.bottom;
-
-
-    // ESCALAS
-    const escala_horizontal = d3.scaleTime().domain(d3.extent(parsed_data, d => d.date)).range([0, width]);
-    const escala_vertical = d3.scaleLinear().domain([0.9 * d3.min(parsed_data, d => Math.min(d.min, d.start, d.end)), 1.1 * d3.max(parsed_data, d => Math.max(d.max, d.start, d.end))]).range([height, 0]);
-
-    // SVG
-    const svg = d3.select("#vis")
-        .attr("width", WIDTH)
-        .attr("height", HEIGHT)
-        .append("g")
-        .attr("transform", `translate(${margin.left}, ${margin.top})`);
-
-    // TITULO
-
-    svg.append("text")
-        .attr("x", (WIDTH / 2))
-        .style("font-size", "20px")
-        .text("Acciones Apple")
-
-
-    // EJES X e Y EN RELACION A LAS ESCALAS
-    svg.append("g")
-        .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(escala_horizontal));
-
-    svg.append("g")
-        .call(d3.axisLeft(escala_vertical).tickFormat(d => `$${d}`)); // Se agrega bonus
-
-    // LINEA MAX y MIN
-    svg.selectAll("difference-line")
-        .data(parsed_data)
+    const selector = d3.select("#region-selector");
+    selector.selectAll("option")
+        .data(regions)
         .enter()
-        .append("line")
-        .attr("x1", d => escala_horizontal(d.date))
-        .attr("y1", d => escala_vertical(d.max))
-        .attr("x2", d => escala_horizontal(d.date))
-        .attr("y2", d => escala_vertical(d.min))
-        .attr("stroke", "black")
-        .attr("stroke-width", 2)
+        .append("option")
+        .text(d => d)
+        .attr("value", d => d);
 
-    // BARRAS
-    svg.selectAll(".bar")
-        .data(parsed_data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", d => escala_horizontal(d.date) - 2)
-        .attr("y", d => escala_vertical(Math.max(d.start, d.end)))
-        .attr("width", 5)
-        .attr("height", d => Math.abs(escala_vertical(d.start) - escala_vertical(d.end)))
-        .attr("fill", d => d.start > d.end ? "red" : "green")
-        .attr("stroke", "black");
-}
+    function update(region) {
+        const data = combinedData.filter(d => d.region === region);
+        console.log("Datos para la región", region, ":", data);
 
-/* Llamamos a nuestra función encargada de procesar los datos, que a su vez se encarga de llamar
-a la función que crea la visualización */
-preprocessingBarchartDataset(data_path);
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.comuna))
+            .range([0, WIDTH2])
+            .padding(0.1);
+
+        const yMax = Math.max(d3.max(data, d => d.pobreza), d3.max(data, d => d.sucursales));
+        const y = d3.scaleLinear()
+            .domain([-yMax, yMax])
+            .range([HEIGHT2, 0]);
+
+        const color = d3.scaleOrdinal()
+            .domain(['pobreza', 'sucursales'])
+            .range(['#6b486b', '#ff8c00']);
+
+        svg2.selectAll("*").remove();
+
+        const bars = svg2.selectAll(".bar-group")
+            .data(data)
+            .enter().append("g")
+            .attr("class", "bar-group")
+            .attr("transform", d => `translate(${x(d.comuna)},0)`);
+
+        bars.append("rect")
+            .attr("class", "bar pobreza")
+            .attr("x", 0)
+            .attr("width", x.bandwidth() / 2)
+            .attr("fill", color('pobreza'))
+            .attr("y", HEIGHT2 / 2)
+            .transition()
+            .duration(500)
+            .attr("height", d => y(0) - y(d.pobreza));
+
+        bars.append("rect")
+            .attr("class", "bar sucursales")
+            .attr("x", 0)
+            .attr("y", d => y(d.sucursales))
+            .attr("width", x.bandwidth() / 2)
+            .attr("fill", color('sucursales'))
+            .transition()
+            .duration(500)
+            .attr("height", d => HEIGHT2 / 2 - y(d.sucursales));
+
+        bars.append("title")
+            .text(d => `${d.comuna}\nPobreza: ${d.pobreza.toFixed(2)}%\nSucursales: ${d.sucursales}`);
+
+        svg2.append("g").call(d3.axisLeft(y).tickFormat(d => Math.abs(d)));
+
+        svg2.append("g")
+            .attr("transform", `translate(0,${HEIGHT2 / 2})`)
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .attr("transform", "rotate(-45)")
+            .style("text-anchor", "end");
+
+        const legend = svg2.append("g")
+            .attr("class", "legend")
+            .attr("transform", `translate(${WIDTH2 - 200}, ${HEIGHT2 - 100})`);
+
+        legend.append("rect")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", color('pobreza'));
+
+        legend.append("text")
+            .attr("x", 24)
+            .attr("y", 15)
+            .text("Pobreza (%)")
+            .style("fill", 'White');
+
+        legend.append("rect")
+            .attr("x", 0)
+            .attr("y", 24)
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", color('sucursales'));
+
+        legend.append("text")
+            .attr("x", 24)
+            .attr("y", 40)
+            .text("Cantidad de Sucursales")
+            .style("fill", 'White');
+    }
+
+    selector.on("change", function() {
+        const region = d3.select(this).property("value");
+        update(region);
+    });
+
+    update(regions[0]);
+}).catch(function(error) {
+    console.error("Error al cargar los datos:", error);
+});

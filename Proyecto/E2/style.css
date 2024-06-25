@@ -1,6 +1,5 @@
 /* Inspirado en https://codepen.io/astronaomical/pen/KexYgb */
 
-/* Estilos generales */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #283593;
@@ -10,7 +9,6 @@ body {
     padding: 0;
 }
 
-/* Contenedor principal */
 .container {
     width: 90%;
     max-width: 1500px;
@@ -21,38 +19,21 @@ body {
     border-radius: 10px;
 }
 
-/* Encabezados */
 h1, h2, h3 {
     margin-bottom: 20px;
     color: #ffb300;
     margin: 0;
-
 }
 
-
-/* Secciones */
 section {
     margin-bottom: 40px;
 }
 
-/* Visualizaciones */
-.visualization {
-    margin-top: 20px;
-    padding: 20px;
-    background: #ecf0f1;
-    border: 1px solid #bdc3c7;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* SVG */
 svg {
     width: 100%;
     height: auto;
 }
 
-/* Enlaces */
 a {
     text-decoration: none;
     color: #fdd835;
@@ -64,19 +45,74 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Footer */
 footer {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #bdc3c7;
 }
 
-
-/* Estilo para el perfil */
 .intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     text-align: left;
+}
+
+.map-container {
+    width: 30%;
+    height: 600px;
+    background-color: #283593;
+}
+
+.details-container {
+    width: 65%;
+    margin-left: 20px;
+    background-color: #283593;
+    color: #fff;
+}
+
+.visualization {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+    background: #283593;
+    border: 1px solid #bdc3c7;
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+.visualization2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+    background: #283593;
+    border: 1px solid #bdc3c7;
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+.map-legend {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffff;
+}
+
+.legend-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+.legend-color {
+    background: linear-gradient(to right, #fff5eb, #d94801);
+    width: 200px;
+    height: 20px;
+    margin-right: 10px;
 }
